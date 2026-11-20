@@ -44,15 +44,53 @@ Interview me to establish:
 11. Unique selling proposition.
 12. Monetization intentions, if applicable.
 13. Development constraints, budget, team size, and capabilities.
-14. Existing design documents, sketches, references, or prototypes.
+14. Existing design documents, references, or prototypes.
 
-Ask focused questions in manageable groups.
+### Required answer format for every interview question
 
-Do not overwhelm me with a massive questionnaire.
+For every question you ask, provide an explicit way to accept your recommended answer without having to restate it.
 
-Where I have not made a decision, offer recommendations and explain the tradeoffs.
+Each question must include:
 
-Allow me to leave decisions unresolved.
+- **Question:** The focused question for me.
+- **AI recommendation / default:** Your best recommendation based on the concept, supplied materials, platform, and known constraints.
+- **Why this default:** A concise explanation of the recommendation and its tradeoffs.
+- **Response options:**
+  - **A — Accept AI recommendation:** I accept the recommended default as written.
+  - **B — Customize:** I will provide a different answer or modify the recommendation.
+  - **C — Leave unresolved:** Keep this decision open and record it as an open design question.
+
+Do not make me type out an answer when I agree with your recommendation. I should be able to respond with just "A", "accept", or the question number followed by "A".
+
+### Accept-all-defaults option
+
+At the beginning of the interview, and again whenever useful, offer this global option:
+
+**ACCEPT ALL AI DEFAULTS** — Accept the AI's recommended answer for every remaining interview question and use those defaults to complete the design discovery process.
+
+When I choose this option:
+
+1. Apply the AI recommendation to every remaining question for which there is enough information to make a defensible recommendation.
+2. Record each accepted recommendation as **APPROVED — AI default accepted by user**. Do not misrepresent it as a user-authored idea.
+3. Do not repeatedly ask me to confirm each accepted default.
+4. For questions where the available information is insufficient, do not fabricate facts. Use a clearly labeled proposed assumption or leave the decision unresolved, whichever is safer.
+5. Maintain a concise decision log showing the question, recommendation, disposition, and rationale.
+6. Continue to the next phase without requiring additional confirmation unless a genuinely blocking ambiguity, material contradiction, or high-impact decision cannot responsibly be defaulted.
+7. At the end of discovery, summarize the defaults accepted, unresolved items, and any assumptions that materially affect scope, cost, platform compliance, safety, or feasibility.
+
+I may also say **ACCEPT ALL DEFAULTS AND GENERATE THE GDD**. In that case, apply all defensible defaults, record unresolved items transparently, and proceed directly through analysis and GDD generation without another approval round.
+
+### Interview pacing and decision handling
+
+Ask focused questions in manageable groups. Do not overwhelm me with a massive questionnaire.
+
+For each question, recommend a default rather than presenting a neutral list of possibilities. Explain meaningful tradeoffs briefly. Where several options are viable, identify the recommended option and why.
+
+Allow me to accept, customize, or defer each recommendation independently. Allow me to accept all remaining recommendations globally at any point.
+
+Do not treat silence, an unanswered question, or a missing fact as approval. Do not invent personal preferences, business commitments, platform capabilities, budgets, team capacity, or implementation status. Distinguish accepted design defaults from assumptions that still require validation.
+
+Where a decision has major consequences and cannot be responsibly defaulted, explain why and ask one focused blocking question. Otherwise, use a conservative proposed default and keep it clearly classified until accepted.
 
 ## PHASE 2 — DESIGN ANALYSIS
 
